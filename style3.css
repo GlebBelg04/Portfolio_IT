@@ -1,0 +1,183 @@
+:root {
+    --bg-color: #C5B399;
+    --dark-color: #1A1A1A;
+    --white: #FFFFFF;
+    --font-main: 'Jost', sans-serif;
+    --font-header: 'Rubik Mono One', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--dark-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* --- ВЕРНУЛ ВАШУ ШАПКУ --- */
+header { background: var(--dark-color); padding: 25px 0; }
+nav { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+nav a { color: white; text-decoration: none; font-family: var(--font-header); font-size: 13px; }
+nav a.active { color: var(--bg-color); }
+.projects-nav { color: white; font-family: var(--font-header); font-size: 13px; }
+.projects-nav a { margin: 0 5px; text-decoration: none; color: #fff; }
+
+/* --- КОНТЕЙНЕР --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- HERO (ОБЛОЖКА) - КРАСИВАЯ И АДАПТИВНАЯ --- */
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background: #000;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: transform 5s ease;
+}
+
+.hero:hover .hero-img { transform: scale(1.05); }
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.btn-contact {
+    background-color: #c4b59b;
+    color: #1a1a1a;
+    padding: 8px 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-contact:hover { background-color: #fff; }
+
+.hero-text-wrap h1 {
+    color: #fff;
+    font-family: var(--font-header);
+    font-size: clamp(20px, 4vw, 32px);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.hero-text-wrap h1 span { color: var(--bg-color); }
+
+.hero-text-wrap p { color: #ddd; font-size: 14px; margin-top: 5px; }
+
+/* --- СЕТКА --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.description p { margin-bottom: 15px; font-size: 14px; text-align: justify; }
+
+.links-box { display: flex; flex-direction: column; gap: 10px; }
+
+.social-icons { display: flex; gap: 10px; }
+
+.icon {
+    background-color: #1a1a1a;
+    color: #fff;
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon:hover { background-color: #333; }
+
+.software-tags { display: flex; flex-direction: column; gap: 5px; }
+
+.tag {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* --- ГАЛЕРЕЯ --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-family: var(--font-header);
+    font-size: 18px;
+}
+
+.gallery-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.gallery-top img, .gallery-wide img, .thumbnails img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.gallery-top img:hover, .thumbnails img:hover { filter: brightness(1.2); }
+
+.gallery-wide { margin-bottom: 30px; }
+
+.placeholder-box { background-color: #d8d0c0; min-height: 250px; }
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+}
+
+/* --- ВЕРНУЛ ВАШ ПОДВАЛ --- */
+.site-footer { background: var(--dark-color); color: white; padding: 50px 10%; }
+.footer-wrapper { display: flex; justify-content: space-between; align-items: flex-end; }
+.footer-left { font-family: var(--font-header); font-size: 14px; line-height: 1.6; }
+
+/* --- МОБИЛЬНЫЙ АДАПТИВ --- */
+@media (max-width: 768px) {
+    nav { gap: 15px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .gallery-top { grid-template-columns: 1fr; }
+    .thumbnails { grid-template-columns: repeat(2, 1fr); }
+    .hero { height: 50vh; }
+    .footer-wrapper { flex-direction: column; align-items: flex-start; gap: 30px; }
+}
