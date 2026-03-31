@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lopukhov Gleb | Все проекты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Дополнительные стили специально для страницы списка проектов */
+        .projects-list-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 3px solid var(--dark-color);
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 15px 15px 0px var(--dark-color);
+            transform: translate(-5px, -5px);
+        }
+
+        .project-card-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-right: 3px solid var(--dark-color);
+        }
+
+        .project-card-info {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-card-info h2 {
+            font-family: var(--font-header);
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .project-card-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .project-btn {
+            align-self: flex-start;
+            background: var(--dark-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: var(--font-header);
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .project-btn:hover {
+            background: var(--white);
+            color: var(--dark-color);
+        }
+
+        @media (max-width: 900px) {
+            .project-card {
+                grid-template-columns: 1fr;
+            }
+            .project-card-img {
+                border-right: none;
+                border-bottom: 3px solid var(--dark-color);
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="Index.html">ГЛАВНАЯ</a>
+            <a href="About.html">О СЕБЕ</a>
+            <a href="Contact.html">КОНТАКТЫ</a>
+            <div class="projects-nav">
+                <a href="Projects.html">ПРОЕКТЫ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <h2 class="massive-title" style="font-size: clamp(40px, 8vw, 80px); margin: 40px 0;">ПРОЕКТЫ</h2>
+
+        <section class="projects-list-grid">
+            
+            <article class="project-card">
+                <img src="gleb-lopukhov-bombard-06-22.jpg" alt="Бомбарда" class="project-card-img">
+                <div class="project-card-info">
+                    <h2>01. БОМБАРДА</h2>
+                    <p>Детальная 3D-визуализация тяжелой осадной мортиры. Проработка сложных механических форм, создание PBR-материалов и эффектов износа в Substance Painter.</p>
+                    <a href="Project.html" class="project-btn">СМОТРЕТЬ</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="2.jpg" alt="Керасиновая лампа" class="project-card-img">
+                <div class="project-card-info">
+                    <h2>02. КЕРАСИНОВАЯ ЛАМПА</h2>
+                    <p>Арт-рендер, полностью выполненный в Blender. Особенность проекта — использование исключительно процедурных текстур для достижения фотореализма.</p>
+                    <a href="Project2.html" class="project-btn">СМОТРЕТЬ</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="gleb-lopukhov-1.jpg" alt="Проект 3" class="project-card-img">
+                <div class="project-card-info">
+                    <h2>03. SCI-FI ОБЪЕКТ</h2>
+                    <p>Экспериментальная работа с твердотельным моделированием (Hard Surface). Фокус на композиции кадра и кинематографичном освещении.</p>
+                    <a href="Project3.html" class="project-btn">СМОТРЕТЬ</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="gleb-lopukhov-pre (1).jpg" alt="Проект 4" class="project-card-img">
+                <div class="project-card-info">
+                    <h2>04. ИГРОВАЯ МОДЕЛЬ</h2>
+                    <p>Создание ассета под игровой движок: оптимизированная топология (Low-poly), запекание карт нормалей и текстурирование в 4К.</p>
+                    <a href="Project4.html" class="project-btn">СМОТРЕТЬ</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="color_1.png" alt="Проект 5" class="project-card-img">
+                <div class="project-card-info">
+                    <h2>05. ПЕРСОНАЖНЫЙ АРТ</h2>
+                    <p>Работа с цветом и освещением в стилизованной графике. Рендеринг в Cycles с последующей постобработкой.</p>
+                    <a href="Project5.html" class="project-btn">СМОТРЕТЬ</a>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="media-section">
+            <h2 class="rubik-h2">ЕСТЬ ИДЕЯ?</h2>
+            <a href="Contact.html" class="btn-contacts-large">ОБСУДИТЬ ПРОЕКТ</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-left">DESIGNED BY<br>LOPUKHOV GLEB<br>2026</div>
+            <div class="footer-right">Все права защищены 2026©</div>
+        </div>
+    </footer>
+
+</body>
+</html>
