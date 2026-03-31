@@ -9,6 +9,11 @@
 </head>
 <body>
 
+    <button id="backToTop" title="Наверх">↑</button>
+
+    <div class="side-blob left"></div>
+    <div class="side-blob right"></div>
+
     <header>
         <nav>
             <a href="Index.html">ГЛАВНАЯ</a>
@@ -21,9 +26,14 @@
     </header>
 
     <main class="home-main">
+        
         <section class="lamp-hero compact">
             <div class="lamp-container">
                 <img src="gleb-lopukhov-bombard-06-22.jpg" alt="Бомбарда Warhammer 40k" class="lamp-img">
+                
+                <div class="hero-shape circle"></div>
+                <div class="hero-shape square"></div>
+
                 <div class="lamp-overlay">
                     <div class="hero-text-wrap">
                         <h1>3Д ХУДОЖНИК</h1>
@@ -32,82 +42,112 @@
                     <a href="Contact.html" class="btn-hero-contact">СВЯЗАТЬСЯ</a>
                 </div>
             </div>
-            </section>
+        </section>
 
-         <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-visual">
-                    <img src="3d.png" alt="3D" class="bg-3d">
-                    <img src="1.png" alt="Gleb" class="main-photo">
-                </div>
+        <h2 class="rubik-h2">КОРОТКО ОБО МНЕ</h2>
 
-                <div class="hero-text-block">
-                    <div class="top-accent-line"></div>
-                    <div class="massive-titles">
-                        <div class="title-group">
-                            <h2>МОДЕЛИ</h2>
-                            <p>ПРОДАКТ ВИЗУАЛИЗАЦИЯ</p>
-                        </div>
-                        <div class="title-group">
-                            <h2>АНИМАЦИЯ</h2>
-                            <p>ИГРОВЫЕ МОДЕЛИ</p>
-                        </div>
-                        <div class="title-group">
-                            <h2>РЕНДЕРЫ</h2>
-                            <p>АРХИТЕКТУРНАЯ ВИЗУАЛИЗАЦИЯ</p>
+        <section class="bio-strip">
+            <div class="bio-content">
+                <div class="bio-interactive-center">
+                    <div class="accent-card" id="tiltCard">
+                        <div class="card-inner">
+                            <span class="card-glare"></span>
+                            <div class="card-content">
+                                <div class="card-logo">CG</div>
+                                <div class="card-line"></div>
+                                <p class="card-tag">Создаю вашу идею</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="cg-badge">CG GENERALIST</div>
+                </div>
+
+                <div class="bio-left">
+                    <h3>Лопухов Глеб</h3>
+                    <p>Профессиональные интересы автора сосредоточены в области компьютерной графики. Основное внимание уделяется полному циклу создания 3D-моделей: от блокинга до финального фотореалистичного рендера.</p>
+                    <br>
+                    <a href="About.html" class="contacts-link-btn">О СЕБЕ</a>
                 </div>
             </div>
         </section>
 
-        <section class="bio-strip">
-            <div class="bio-content">
-                <div class="bio-left">
-                    <h3>Лопухов Глеб</h3>
-                    <p>В настоящее время профессиональные интересы автора сосредоточены в области компьютерной графики, преимущественно в направлении трёхмерного моделирования. Основное внимание уделяется созданию 3D-моделей по полному производственному циклу, включающему этапы моделирования, текстурирования, настройки материалов, освещения и финального рендеринга.</p>
+        <section class="services-section">
+            <h2 class="rubik-h2">МОИ УСЛУГИ</h2>
+            
+            <div class="services-container">
+                <div class="service-card-modern">
+                    <div class="service-icon-wrap">
+                        <div class="icon-box">3D</div>
+                    </div>
+                    <h3>МОДЕЛИРОВАНИЕ</h3>
+                    <p>Создание High-poly и Low-poly моделей для игр и визуализаций. Полный цикл: от драфта до репотологии.</p>
+                    <div class="service-footer">
+                        <span class="service-step">Шаг  01</span>
+                        <div class="service-dot"></div>
+                    </div>
                 </div>
-                <a href="Contact.html" class="contacts-link-btn">КОНТАКТЫ</a>
+
+                <div class="service-card-modern">
+                    <div class="service-icon-wrap">
+                        <div class="icon-box">RT</div>
+                    </div>
+                    <h3>ВИЗУАЛИЗАЦИЯ</h3>
+                    <p>Фотореалистичный рендер продуктов, интерьеров и техники. Настройка освещения и материалов Octane/Cycles.</p>
+                    <div class="service-footer">
+                        <span class="service-step">Шаг 02</span>
+                        <div class="service-dot"></div>
+                    </div>
+                </div>
+
+                <div class="service-card-modern">
+                    <div class="service-icon-wrap">
+                        <div class="icon-box">TX</div>
+                    </div>
+                    <h3>ТЕКСТУРИРОВАНИЕ</h3>
+                    <p>PBR текстурирование (Metal/Roughness) в Substance Painter. Создание уникальных смарт-материалов.</p>
+                    <div class="service-footer">
+                        <span class="service-step">Шаг  03</span>
+                        <div class="service-dot"></div>
+                    </div>
+                </div>
             </div>
         </section>
         
         <section class="portfolio-section">
-            <h2 class="massive-title">ПОРТФОЛИО</h2>
+            <h2 class="rubik-h2">ПОРТФОЛИО</h2>
             <div class="portfolio-grid">
-                <a href="Project.html" class="grid-item item-1">
-                    <img src="2.jpg" alt="Керасиновая лампа">
+                <a href="Project.html" class="grid-item">
+                    <img src="2.jpg" alt="Проект 1">
                     <div class="item-meta">
                         <h3>Керасиновая лампа</h3>
-                        <p>Процедурный рендер</p>
+                        <p>Visualisation</p>
                     </div>
                 </a>
-                <a href="Project.html" class="grid-item item-2">
-                    <img src="gleb-lopukhov-bombard-06-22.jpg" alt="Бомбарда">
+                <a href="Project.html" class="grid-item">
+                    <img src="gleb-lopukhov-bombard-06-22.jpg" alt="Проект 2">
                     <div class="item-meta">
                         <h3>Бомбарда</h3>
-                        <p>Warhammer 40k</p>
+                        <p>Game Ready</p>
                     </div>
                 </a>
-                <a href="Project.html" class="grid-item item-3">
-                    <img src="gleb-lopukhov-1.jpg" alt="Sci-Fi деталь">
+                <a href="Project.html" class="grid-item">
+                    <img src="gleb-lopukhov-1.jpg" alt="Проект 3">
                     <div class="item-meta">
                         <h3>Sci-Fi Концепт</h3>
                         <p>Hard Surface</p>
                     </div>
                 </a>
-                <a href="Project.html" class="grid-item item-4">
-                    <img src="gleb-lopukhov-pre (1).jpg" alt="Игровой ассет">
+                <a href="Project.html" class="grid-item">
+                    <img src="gleb-lopukhov-pre (1).jpg" alt="Проект 4">
                     <div class="item-meta">
                         <h3>Игровой Ассет</h3>
-                        <p>Оптимизация</p>
+                        <p>Prop Design</p>
                     </div>
                 </a>
-                <a href="Project.html" class="grid-item item-5 wide">
-                    <img src="color_1.png" alt="Стилизованный персонаж">
+                <a href="Project.html" class="grid-item wide">
+                    <img src="color_1.png" alt="Проект 5">
                     <div class="item-meta">
                         <h3>Стилизация</h3>
-                        <p>Работа с цветом</p>
+                        <p>Character Art</p>
                     </div>
                 </a>
             </div>
@@ -120,10 +160,10 @@
         <section class="media-section centrated">
             <h2 class="rubik-h2">МЕДИА</h2>
             <div class="social-grid">
-                    <a href="#" class="social-item"><span>Bē</span></a>
-                    <a href="#" class="social-item"><span>Art</span></a>
-                    <a href="#" class="social-item"><span>In</span></a>
-                    <a href="#" class="social-item"><span>TG</span></a>
+                <a href="#" class="social-item"><span>Bē</span></a>
+                <a href="#" class="social-item"><span>Art</span></a>
+                <a href="#" class="social-item"><span>In</span></a>
+                <a href="#" class="social-item"><span>TG</span></a>
             </div>
             <a href="Contact.html" class="btn-contacts-large">КОНТАКТЫ</a>
         </section>
@@ -135,6 +175,38 @@
             <div class="footer-right">Все права защищены 2026©</div>
         </div>
     </footer>
+
+    <script>
+        const btt = document.getElementById("backToTop");
+        window.onscroll = () => btt.style.display = window.scrollY > 400 ? "block" : "none";
+        btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+
+        const card = document.getElementById('tiltCard');
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Вычисляем углы поворота
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            // Передаем координаты для блика
+            card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+            card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        });
+    </script>
+
+    
 
 </body>
 </html>

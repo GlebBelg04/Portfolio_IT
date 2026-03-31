@@ -359,8 +359,8 @@ nav a:hover, nav a.active {
 .bg-3d {
     position: absolute;
     left: 20px;
-    bottom: 120px;
-    width: 380px;
+    bottom: 140px;
+    width: 240px;
     z-index: 1;
 }
 
@@ -697,7 +697,113 @@ nav a:hover, nav a.active {
 
 
 
+/* СЕТКА 2х2 ДЛЯ ПО */
+.software-interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ровно 2 колонки */
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 900px; /* Ограничение ширины для формирования квадрата всей группы */
+}
 
+.sw-card-modern {
+    background: rgba(26, 26, 26, 0.03);
+    border: 2px solid var(--dark-color);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Делает каждый блок квадратным */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+}
 
+.sw-icon-box {
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-header);
+    font-size: 18px;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
 
+.sw-card-modern h4 {
+    font-family: var(--font-header);
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.sw-card-modern ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sw-card-modern ul li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    position: relative;
+    padding-left: 15px;
+}
+
+.sw-card-modern ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
+
+/* Специальный стиль для списка без тире (Adobe) */
+.sw-simple-list-style li::before {
+    display: none;
+}
+.sw-simple-list-style li {
+    padding-left: 0 !important;
+    font-weight: 700;
+}
+
+/* ИНТЕРАКТИВ */
+.sw-card-modern:hover {
+    background: var(--dark-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.sw-card-modern:hover .sw-icon-box {
+    border-color: var(--bg-color);
+    color: var(--bg-color);
+    transform: rotate(45deg);
+}
+
+.sw-card-modern:hover ul li {
+    opacity: 1;
+}
+
+/* ТЕМНАЯ КАРТОЧКА (Adobe) */
+.sw-dark-card {
+    background: var(--dark-color);
+    color: white;
+}
+.sw-dark-card .sw-icon-box {
+    border-color: var(--bg-color);
+    color: var(--bg-color);
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    .software-interactive-grid {
+        grid-template-columns: 1fr; /* На мобильных в одну колонку */
+        max-width: 100%;
+    }
+    .sw-card-modern {
+        aspect-ratio: auto; /* Убираем квадрат на мобильных для удобства чтения */
+        padding: 30px;
+    }
+}
 

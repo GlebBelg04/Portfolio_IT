@@ -17,12 +17,20 @@
             <a href="About.html">О СЕБЕ</a>
             <a href="Contact.html">КОНТАКТЫ</a>
             <div class="projects-nav">
-                ПРОЕКТЫ: <a href="Project.html" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>
+                <a href="Projects.html">ПРОЕКТЫ</a>
             </div>
         </nav>
     </header>
 
     <main class="container">
+        <nav class="project-pagination">
+            <a href="Projects.html" class="back-to-gallery">← ВЕРНУТЬСЯ В ГАЛЕРЕЮ</a>
+            <div class="nav-arrows">
+                <a href="#" class="nav-link">ПРЕДЫДУЩИЙ</a>
+                <span class="nav-divider">/</span>
+                <a href="#" class="nav-link">СЛЕДУЮЩИЙ</a>
+            </div>
+        </nav>
         <section class="hero">
             <div class="hero-overlay"></div>
             <img src="2.jpg" alt="Main Project" class="hero-img">
@@ -72,13 +80,42 @@
             </div>
         </section>
 
-        <section class="thumbnails" >
-            <img src="image 35.png" alt="Thumb 1">
-            <img src="2.jpg" alt="Thumb 2">
-            <img src="gleb-lopukhov-1.jpg" alt="Thumb 3">
-            <img src="gleb-lopukhov-pre (1).jpg" alt="Thumb 4">
+        <section class="portfolio-section" style="margin-top: 100px;">
+            <h2 class="rubik-h2" style="text-align: center; margin-bottom: 50px;">ДРУГИЕ ПРОЕКТЫ</h2>
+            <div class="portfolio-grid">
+                <a href="Project.html" class="grid-item">
+                    <img src="2.jpg" alt="Проект 1">
+                    <div class="item-meta">
+                        <h3>Керасиновая лампа</h3>
+                        <p>Visualisation</p>
+                    </div>
+                </a>
+                <a href="Project.html" class="grid-item">
+                    <img src="gleb-lopukhov-1.jpg" alt="Проект 3">
+                    <div class="item-meta">
+                        <h3>Sci-Fi Концепт</h3>
+                        <p>Hard Surface</p>
+                    </div>
+                </a>
+                <a href="Project.html" class="grid-item">
+                    <img src="gleb-lopukhov-pre (1).jpg" alt="Проект 4">
+                    <div class="item-meta">
+                        <h3>Игровой Ассет</h3>
+                        <p>Prop Design</p>
+                    </div>
+                </a>
+                <a href="Project.html" class="grid-item">
+                    <img src="image 35.png" alt="Проект 5">
+                    <div class="item-meta">
+                        <h3>Стилизация</h3>
+                        <p>Character Art</p>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
+
+    <button id="backToTop" title="Наверх">↑</button>
 
     <footer class="site-footer">
         <div class="footer-wrapper">
@@ -86,5 +123,20 @@
             <div class="footer-right">Все права защищены 2026©</div>
         </div>
     </footer>
+
+    <script>
+        // Скрипт для кнопки "Наверх"
+        const btt = document.getElementById("backToTop");
+        window.onscroll = () => {
+            if (window.scrollY > 400) {
+                btt.style.display = "block";
+            } else {
+                btt.style.display = "none";
+            }
+        };
+        btt.onclick = () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
 </body>
 </html>

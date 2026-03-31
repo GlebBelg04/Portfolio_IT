@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lopukhov Gleb | О себе</title>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <button id="backToTop" title="Наверх">↑</button>
 
     <header>
         <nav>
@@ -15,11 +18,12 @@
             <a href="About.html" class="active">О СЕБЕ</a>
             <a href="Contact.html">КОНТАКТЫ</a>
             <div class="projects-nav">
-               ПРОЕКТЫ: <a href="Project.html">1</a> <a href="Project2.html">2</a> <a href="Project3.html">3</a> <a href="Project4.html">4</a> <a href="Project5.html">5</a>
+                <a href="Projects.html">ПРОЕКТЫ</a>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="home-main">
         <section class="hero-section">
             <div class="hero-container">
                 <div class="hero-visual">
@@ -52,7 +56,7 @@
             <div class="bio-content">
                 <div class="bio-left">
                     <h3>Лопухов Глеб</h3>
-                    <p>В настоящее время профессиональные интересы автора сосредоточены в области компьютерной графики, преимущественно в направлении трёхмерного моделирования. Основное внимание уделяется созданию 3D-моделей по полному производственному циклу, включающему этапы моделирования, текстурирования, настройки материалов, освещения и финального рендеринга.</p>
+                    <p>В настоящее время профессиональные интересы автора сосредоточены в области компьютерной графики, преимущественно в направлении трёхмерного моделирования. Основное внимание уделяется созданию 3D-моделей по полному производственному циклу.</p>
                 </div>
                 <a href="Contact.html" class="contacts-link-btn">КОНТАКТЫ</a>
             </div>
@@ -61,7 +65,7 @@
         <section class="details-section">
             <div class="details-grid">
                 <div class="details-col">
-                    <h2 class="rubik-title">ОПЫТ</h2>
+                    <h2 class="rubik-h2" style="text-align: left; margin-bottom: 30px;">ОПЫТ</h2>
                     <div class="experience-list">
                         <div class="exp-row">
                             <strong>2021 - 2022</strong>
@@ -79,7 +83,7 @@
                 </div>
 
                 <div class="details-col">
-                    <h2 class="rubik-title">НАВЫКИ</h2>
+                    <h2 class="rubik-h2" style="text-align: left; margin-bottom: 30px;">НАВЫКИ</h2>
                     <div class="skills-block">
                         <div class="skill-item dark">HARD SURFACE</div>
                         <div class="skill-item dark">ТЕКСТУРЫ</div>
@@ -90,19 +94,21 @@
                 </div>
             </div>
 
-            <h2 class="rubik-title sw-title">ВЛАДЕНИЕ ПО</h2>
-            <div class="software-grid">
-                <div class="sw-box border">
+            <h2 class="rubik-h2">ВЛАДЕНИЕ ПО</h2>
+
+            <div class="software-interactive-grid">
+                <div class="sw-card-modern">
+                    <div class="sw-icon-box">BL</div>
                     <h4>BLENDER 3D</h4>
                     <ul>
-                        <li>7 лет опыта с версии 2.79</li>
-                        <li>Создание 3д моделей любой сложности</li>
-                        <li>Продвинутое Hard surface моделирование</li>
-                        <li>Работа с нодовой системой, создание сложных материалов</li>
-                        <li>Работа с модификаторами</li>
+                        <li>Полигональное моделирование объектов любой сложности</li>
+                        <li>Работа с процедурными и нодовыми материалами</li>
+                        <li>Скульптор и работа с кривыми</li>
                     </ul>
                 </div>
-                <div class="sw-box border">
+
+                <div class="sw-card-modern">
+                    <div class="sw-icon-box">SP</div>
                     <h4>SUBSTANCE PAINTER</h4>
                     <ul>
                         <li>Создание многослойных процедурных материалов</li>
@@ -110,7 +116,9 @@
                         <li>Экспорт текстур под конкретный движок</li>
                     </ul>
                 </div>
-                <div class="sw-box border">
+
+                <div class="sw-card-modern">
+                    <div class="sw-icon-box">MD</div>
                     <h4>MARVELOUS DESIGNER</h4>
                     <ul>
                         <li>Симуляция тканей и одежды</li>
@@ -118,13 +126,16 @@
                         <li>Создание элементов одежды для персонажей</li>
                     </ul>
                 </div>
-                <div class="sw-box dark">
-                    <div class="sw-simple-list">
-                        <h4>ADOBE PHOTOSHOP</h4>
-                        <h4>ADOBE ILLUSTRATOR</h4>
-                        <h4>ADOBE PREMIERE PRO</h4>
-                        <h4>FIGMA</h4>
-                    </div>
+
+                <div class="sw-card-modern sw-dark-card">
+                    <div class="sw-icon-box">AD</div>
+                    <h4>ADOBE & FIGMA</h4>
+                    <ul class="sw-simple-list-style">
+                        <li>ADOBE PHOTOSHOP</li>
+                        <li>ADOBE ILLUSTRATOR</li>
+                        <li>ADOBE PREMIERE PRO</li>
+                        <li>FIGMA</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -132,14 +143,15 @@
 
     <footer class="site-footer">
         <div class="footer-wrapper">
-            <div class="footer-left">
-                DESIGNED BY<br>LOPUKHOV GLEB<br>2026
-            </div>
-            <div class="footer-right">
-                Все права защищены 2026©
-            </div>
+            <div class="footer-left">DESIGNED BY<br>LOPUKHOV GLEB<br>2026</div>
+            <div class="footer-right">Все права защищены 2026©</div>
         </div>
     </footer>
 
+    <script>
+        const btt = document.getElementById("backToTop");
+        window.onscroll = () => btt.style.display = window.scrollY > 400 ? "block" : "none";
+        btt.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+    </script>
 </body>
 </html>
