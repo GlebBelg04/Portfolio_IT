@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gleb Lopukhov - Warhammer 40k Bombard</title>
+    <title>Gleb Lopukhov - Керосиновая лампа</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style3.css">
+    <style>
+        /* Стили для галереи с двумя вертикальными рендерами */
+        .gallery-main {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery-main .render-container {
+            flex: 1;
+            height: 800px; /* Высота галереи */
+            overflow: hidden;
+        }
+
+        .gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Чтобы картинки заполняли высоту, сохраняя пропорции */
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* Адаптив для мобильных устройств */
+        @media (max-width: 768px) {
+            .gallery-main {
+                flex-direction: column;
+            }
+            .gallery-main .render-container {
+                height: 500px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -26,27 +59,28 @@
         <nav class="project-pagination">
             <a href="Projects.html" class="back-to-gallery">← ВЕРНУТЬСЯ В ГАЛЕРЕЮ</a>
             <div class="nav-arrows">
-                <a href="#" class="nav-link">ПРЕДЫДУЩИЙ</a>
+                <a href="Project4.html" class="nav-link">ПРЕДЫДУЩИЙ</a>
                 <span class="nav-divider">/</span>
-                <a href="#" class="nav-link">СЛЕДУЮЩИЙ</a>
+                <a href="Project.html" class="nav-link">СЛЕДУЮЩИЙ</a>
             </div>
         </nav>
+
         <section class="hero">
             <div class="hero-overlay"></div>
-            <img src="2.jpg" alt="Main Project" class="hero-img">
+            <img src="2.jpg" alt="Керосиновая лампа" class="hero-img">
             <div class="hero-content">
                 <a href="Contact.html" class="btn-contact">СВЯЗАТЬСЯ</a>
                 <div class="hero-text-wrap">
                     <h1>ПРОЕКТ <br><span>Лампа</span></h1>
-                    <p>Арт рендер осадного орудия. Моделинг в Blender, <br> детализация текстур в Substance Painter.</p>
+                    <p>Фотореалистичная визуализация винтажного осветительного прибора. <br> Детальный моделинг в Blender и работа со сложными светопропускающими материалами.</p>
                 </div>
             </div>
         </section>
 
         <section class="info-grid">
             <div class="description">
-                <p>Данная работа представляет собой детальную 3D-визуализацию тяжелой осадной мортиры типа «Бомбарда», состоящей на вооружении полков Имперской Гвардии. Основной задачей проекта была отработка навыков создания сложных механических форм и работа с PBR-материалами.</p>
-                <p>Модель выполнена с упором на функциональность: проработаны механизмы отката ствола, гидравлические опоры и система заряжания. Особое внимание уделено микродетализации корпуса — от заклепок до следов эксплуатации в суровых боевых условиях.</p>
+                <p>Данный проект представляет собой высокодетализированную 3D-модель классической керосиновой лампы. Основной акцент в работе был сделан на фотореализм и передачу физических свойств различных материалов: от тонкого хрупкого стекла колбы до потертого металла корпуса с характерным матовым блеском.</p>
+                <p>Модель создана с учетом всех конструктивных особенностей реального прототипа. В процессе работы были детально проработаны механизмы отката, держатель фитиля и система регулировки пламени.</p>
             </div>
             <div class="links-box">
                 <div class="social-icons">
@@ -55,7 +89,7 @@
                 </div>
                 <div class="software-tags">
                     <div class="tag">BLENDER 3D</div>
-                    
+                    <div class="tag">CYCLES RENDER</div>
                 </div>
             </div>
         </section>
@@ -63,20 +97,18 @@
         <h2 class="section-title">ГАЛЕРЕЯ</h2>
 
         <section class="gallery-main">
-            <div class="gallery-top">
-                <img src="gleb-lopukhov-bombard-06-22.jpg" alt="View 1">
-                <img src="gleb-lopukhov-bombard7.jpg" alt="View 2">
-                <img src="gleb-lopukhov-bombard-06-22-2 (1).jpg" alt="View 3">
+            <div class="render-container">
+                <img src="2.jpg" alt="Лампа - Рендер 1">
             </div>
-            <div class="gallery-wide">
-                <img src="gleb-lopukhov-bombard9.jpg" alt="Technical Specs">
+            <div class="render-container">
+                <img src="21.png" alt="Лампа - Рендер 2">
             </div>
         </section>
 
         <section class="info-grid second-info">
             <div class="description">
-                <p>Весь процесс создания, от блокинга до финального рендера, занял около трех недель. Ключевой особенностью является работа с текстурами в Substance Painter: это позволило добиться уникального эффекта ржавчины, сколов краски и масляных подтеков.</p>
-                <p>Освещение настроено по трехточечной схеме с использованием HDRI-карты промышленной зоны для создания реалистичных металлических отражений и передачи атмосферы гримдарка.</p>
+                <p>Процесс создания включал в себя полный цикл: от создания точной геометрии на основе реальных чертежей до финального рендеринга. Для достижения мягкого, естественного освещения использовалась комбинированная схема света, имитирующая уютную домашнюю атмосферу или свет в мастерской.</p>
+                <p>Ключевой сложностью проекта стала настройка шейдеров стекла и горения. С помощью движка Cycles удалось добиться реалистичного преломления света в колбе и мягкого градиента на поверхностях.</p>
             </div>
         </section>
 
@@ -84,28 +116,28 @@
             <h2 class="rubik-h2" style="text-align: center; margin-bottom: 50px;">ДРУГИЕ ПРОЕКТЫ</h2>
             <div class="portfolio-grid">
                 <a href="Project.html" class="grid-item">
-                    <img src="2.jpg" alt="Проект 1">
+                    <img src="2.jpg" alt="Керасиновая лампа">
                     <div class="item-meta">
                         <h3>Керасиновая лампа</h3>
                         <p>Visualisation</p>
                     </div>
                 </a>
                 <a href="Project.html" class="grid-item">
-                    <img src="gleb-lopukhov-1.jpg" alt="Проект 3">
+                    <img src="gleb-lopukhov-1.jpg" alt="Sci-Fi Концепт">
                     <div class="item-meta">
                         <h3>Sci-Fi Концепт</h3>
                         <p>Hard Surface</p>
                     </div>
                 </a>
                 <a href="Project.html" class="grid-item">
-                    <img src="gleb-lopukhov-pre (1).jpg" alt="Проект 4">
+                    <img src="gleb-lopukhov-pre (1).jpg" alt="Игровой Ассет">
                     <div class="item-meta">
                         <h3>Игровой Ассет</h3>
                         <p>Prop Design</p>
                     </div>
                 </a>
                 <a href="Project.html" class="grid-item">
-                    <img src="image 35.png" alt="Проект 5">
+                    <img src="image 35.png" alt="Стилизация">
                     <div class="item-meta">
                         <h3>Стилизация</h3>
                         <p>Character Art</p>
@@ -125,18 +157,12 @@
     </footer>
 
     <script>
-        // Скрипт для кнопки "Наверх"
         const btt = document.getElementById("backToTop");
         window.onscroll = () => {
-            if (window.scrollY > 400) {
-                btt.style.display = "block";
-            } else {
-                btt.style.display = "none";
-            }
+            if (window.scrollY > 400) { btt.style.display = "block"; } 
+            else { btt.style.display = "none"; }
         };
-        btt.onclick = () => {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
+        btt.onclick = () => { window.scrollTo({top: 0, behavior: 'smooth'}); };
     </script>
 </body>
 </html>
