@@ -63,24 +63,23 @@
             <section class="form-side">
                 <div class="form-card">
                     <h3 class="form-title">ОТПРАВИТЬ СООБЩЕНИЕ</h3>
-                    <form>
+                    <form id="contact-form">
                         <div class="input-group">
                             <label>Как я могу к вам обращаться</label>
-                            <input type="text" placeholder="Леонид Каневский">
+                            <input type="text" id="name" placeholder="Леонид Каневский" required>
                         </div>
                         <div class="input-group">
                             <label>Ваша электронная почта</label>
-                            <input type="email" placeholder="Leonid@gmail.com">
+                            <input type="email" id="email" placeholder="Leonid@gmail.com" required>
                         </div>
                         <div class="input-group">
-                            <label>Тема сообщения</label>
-                            <input type="text" placeholder="Обсуждение проекта">
+                            <label>Сообщение</label>
+                            <textarea id="message" placeholder="Введите текст..." required></textarea>
                         </div>
-                        <div class="input-group">
-                            <label>Расскажите о своем запросе</label>
-                            <textarea placeholder="Введите текст..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                        
+                        <div id="form-status" class="form-status"></div>
+
+                        <button type="submit" id="submit-btn" class="submit-btn">ОТПРАВИТЬ</button>
                     </form>
                 </div>
             </section>
@@ -99,6 +98,7 @@
             </div>
         </div>
     </footer>
+    <script src="script4.js"></script>
 
 </body>
 </html>
